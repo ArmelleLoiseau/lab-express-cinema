@@ -1,0 +1,20 @@
+<div id="onemovie-page">
+    <a id="goback-link" href="/movies">Go back</a>
+    <img id="movie-poster" src="{{movie.image}}" alt="{{movie.title}}">
+    <div id="onemovie-box">
+        <h3>{{movie.title}}</h3>
+        <h4>Director: {{movie.director}}</h4>
+        <h5>Stars</h5>
+        <ul>
+            {{#each movie.stars}}
+            <li>{{this}}</li>
+            {{/each}}
+        </ul>
+        <p>{{movie.description}}</p>
+        <p>
+            {{#each movie.showtimes}}
+                {{this}} |
+            {{/each}}
+        </p>
+    </div>
+</div>
