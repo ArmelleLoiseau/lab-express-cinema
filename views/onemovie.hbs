@@ -13,7 +13,10 @@
         <p>{{movie.description}}</p>
         <p>
             {{#each movie.showtimes}}
-                {{this}} |
+                <span>{{this}}<span>
+            {{#unless @last}}
+                <span> | </span>
+            {{/unless}}
             {{/each}}
         </p>
     </div>
